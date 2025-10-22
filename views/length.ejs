@@ -1,0 +1,19 @@
+<%- include('layout', { body: `
+  <h2>Convert Length</h2>
+  <form method="POST">
+    <input type="number" step="any" name="value" placeholder="Enter value" required>
+    <select name="from_unit">
+      <option>millimeter</option><option>centimeter</option><option>meter</option>
+      <option>kilometer</option><option>inch</option><option>foot</option>
+      <option>yard</option><option>mile</option>
+    </select>
+    to
+    <select name="to_unit">
+      <option>millimeter</option><option>centimeter</option><option>meter</option>
+      <option>kilometer</option><option>inch</option><option>foot</option>
+      <option>yard</option><option>mile</option>
+    </select>
+    <button type="submit">Convert</button>
+  </form>
+  ${result !== null ? `<p><strong>Result:</strong> ${result}</p>` : ''}
+` }) %>

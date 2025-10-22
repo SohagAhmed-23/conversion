@@ -1,0 +1,17 @@
+<%- include('layout', { body: `
+  <h2>Convert Weight</h2>
+  <form method="POST">
+    <input type="number" step="any" name="value" placeholder="Enter value" required>
+    <select name="from_unit">
+      <option>milligram</option><option>gram</option><option>kilogram</option>
+      <option>ounce</option><option>pound</option>
+    </select>
+    to
+    <select name="to_unit">
+      <option>milligram</option><option>gram</option><option>kilogram</option>
+      <option>ounce</option><option>pound</option>
+    </select>
+    <button type="submit">Convert</button>
+  </form>
+  ${result !== null ? `<p><strong>Result:</strong> ${result}</p>` : ''}
+` }) %>
